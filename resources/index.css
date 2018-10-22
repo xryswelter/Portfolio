@@ -1,0 +1,45 @@
+.name{
+    font-family: "Libre Barcode 128 Text", cursive;
+    font-size: 48px;
+}
+nav, footer{
+    background-color:rgb(37,85,127);
+    color: rgb(187,229,227)
+}
+.active{
+    color: black;
+}
+
+.link{
+    color:white;
+}
+
+.content{
+    min-height: 70VH;
+    background-color: rgb(141,214,255)
+
+}
+.program{
+    background-size: contain;
+    max-height:50px;
+    max-width:50px;
+}
+#linkedIn{
+    max-height:50px;
+    max-width:50px;
+    background-image: url('/MacroRef/Images/Linkedin.png');
+}
+.youtube{
+    max-height:50px;
+    /* max-width:50px; */
+}
+
+.links, .logos{
+    justify-content: space-evenly;
+}
+.footerGroups{
+    text-align: center;
+}
+footer{
+    padding:5px
+}
