@@ -1,0 +1,55 @@
+.spacing {
+  width: 100%;
+  /* display:inline-block; */
+  justify-content: space-evenly;
+  /* margin:auto; */
+}
+.content-space {
+  width: 100%;
+  /* justify-content: space-evenly; */
+  margin: auto;
+}
+.name {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 48px;
+}
+.head,
+footer {
+  background-color: rgb(37, 85, 127);
+  color: rgb(187, 229, 227);
+  text-align: center;
+}
+.link {
+  color: white;
+}
+
+.content {
+  min-height: 90vh;
+  background-color: rgb(141, 214, 255);
+  padding-top:20px
+}
+.program {
+  background-size: contain;
+  max-height: 50px;
+  max-width: 50px;
+}
+#linkedIn {
+  max-height: 50px;
+  max-width: 50px;
+  background-image: url("/MacroRef/Images/Linkedin.png");
+}
+.youtube {
+  max-height: 50px;
+  /* max-width:50px; */
+}
+
+.links,
+.logos {
+  justify-content: space-evenly;
+}
+.footerGroups {
+  text-align: center;
+}
+footer {
+  padding: 5px;
+}
