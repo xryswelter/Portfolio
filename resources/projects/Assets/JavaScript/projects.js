@@ -70,7 +70,7 @@ let buttonArray = [
     value: '6'
   },
   {
-    name: 'CPR_finalproject',
+    name: 'CPR Online Testing',
     title: 'project3',
     text:
       'An application that was designed to help those wishing to get a CPR certification by providing the online CPR test.',
