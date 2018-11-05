@@ -83,22 +83,39 @@ let buttonArray = [
 //Function to load buttons onto screen
 function loadbuttons() {
   buttonArray.forEach(element => {
+    //Create Card
+    let card = document.createElement('div');
+    card.classList.add('card');
+    card.setAttribute('style', 'width: 18rem;');
+    //Create Imaged Button
     let button = document.createElement('BUTTON');
     let span = document.createElement('SPAN');
+    let title = document.createElement('button');
     button.classList.add(`${element.title}`);
     button.setAttribute('id', 'button');
     button.setAttribute('value', `${element.value}`);
     button.setAttribute('style', `background-image: url('${element.image}')`);
-    button.setAttribute('data-toggle','modal');
-    button.setAttribute('data-target','#exampleModal');
+    button.setAttribute('data-toggle', 'modal');
+    button.setAttribute('data-target', '#exampleModal');
     // button.addEventListener('click',display(event))
+    // button.append(span)
+    // Create Title
+    title.setAttribute('id', 'titles');
+    title.classList.add('mt-3', 'btn', 'btn-primary');
+    title.setAttribute('style','margin: auto');
+    title.setAttribute('data-toggle', 'modal');
+    title.setAttribute('value', `${element.value}`);
+    title.setAttribute('data-target', '#exampleModal');
     span.innerHTML = `${element.name}`;
-    // span.setAttribute('id','span')
-    button.append(span)
+    span.setAttribute('id', 'span');
+    title.append(span)
+
+    card.append(button);
+    card.append(title)
     if (element.value < 5) {
-      $('.homeworks').append(button);
+      $('.homeworks').append(card);
     } else {
-      $('.projects').append(button);
+      $('.projects').append(card);
     }
   });
 }
@@ -107,7 +124,7 @@ $(document).ready(function() {
   loadbuttons();
 });
 // Click Event to display information below buttons
-$('.container').on('click', '#button', function() {
+$('.container').on('click', 'button', function() {
   let value = $(this).val();
   display(value);
 });
@@ -116,9 +133,8 @@ function display(value) {
   let buttonEvent = buttonArray[value];
   $('.title').text(`${buttonEvent.name}`);
   $('.text').text(`${buttonEvent.text}`);
-  let link = $('.link')
-  link.attr('href', `${buttonEvent.link}`).attr('target','_blank');
-  let git = $('.github')
-  git.attr('href', `${buttonEvent.github}`).attr('target','_blank');
+  let link = $('.link');
+  link.attr('href', `${buttonEvent.link}`).attr('target', '_blank');
+  let git = $('.github');
+  git.attr('href', `${buttonEvent.github}`).attr('target', '_blank');
 }
-
