@@ -89,6 +89,8 @@ function loadbuttons() {
     button.setAttribute("id", "button");
     button.setAttribute("value", `${element.value}`);
     button.setAttribute("style", `background-image: url("${element.image}")`);
+    button.data-toggle('modal');
+    button.data-target('#exampleModal');
     // button.addEventListener('click',display(event))
     span.innerHTML = `${element.name}`;
     // span.setAttribute("id","span")
@@ -119,3 +121,4 @@ function display(value) {
   let git = $(".github")
   git.attr("href", `${buttonEvent.github}`).attr('target','_blank');
 }
+
