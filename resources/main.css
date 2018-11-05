@@ -26,7 +26,8 @@ footer {
 .content {
   min-height: 90vh;
   background-color: rgb(141, 214, 255);
-  padding-top:20px
+  padding-top:20px;
+  padding-bottom:20px;
 }
 .program {
   background-size: contain;
@@ -52,4 +53,14 @@ footer {
 }
 footer {
   padding: 5px;
+}
+nav{
+  font-weight: bolder;
+  font-size:30px;
+}
+
+@media(min-width:900px){
+  .name{
+    font-size: 84px;
+  }
 }

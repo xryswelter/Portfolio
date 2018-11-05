@@ -1,0 +1,26 @@
+.center {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+a + a {
+  margin-left: 30px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.split {
+  margin-left: auto;
+}
+.bold {
+  font-weight: bold;
+}
+ul {
+  font-weight: normal;
+}
+h6 + h6{
+    margin-left:30px
+}
+.center >.row{
+    justify-content: center
+}

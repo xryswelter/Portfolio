@@ -84,12 +84,15 @@ let buttonArray = [
 function loadbuttons() {
   buttonArray.forEach(element => {
     let button = document.createElement("BUTTON");
+    let span = document.createElement("SPAN");
     button.classList.add(`${element.title}`);
     button.setAttribute("id", "button");
     button.setAttribute("value", `${element.value}`);
     button.setAttribute("style", `background-image: url("${element.image}")`);
     // button.addEventListener('click',display(event))
-    button.innerHTML = `${element.name}`;
+    span.innerHTML = `${element.name}`;
+    // span.setAttribute("id","span")
+    button.append(span)
     if (element.value < 5) {
       $(".homeworks").append(button);
     } else {
@@ -100,37 +103,19 @@ function loadbuttons() {
 // Document onload function
 $(document).ready(function() {
   loadbuttons();
-  console.log('echo')
 });
 // Click Event to display information below buttons
-$('#button').on('click', function () {
-  console.log("zoo");
-  display();
+$(".container").on("click", "#button", function() {
+  let value = $(this).val();
+  display(value);
 });
 // Displaying function
-function display() {
-  // event.preventDefault()
-  console.log("moo");
-  // clear();
-  console.log("poo");
-  let value = this.val();
+function display(value) {
   let buttonEvent = buttonArray[value];
-  $(".name").innerHTML(`${buttonEvent.name}`);
-}
-// Reset info function
-function clear() {
-}
-{
-  /* <div class="explanation">
-  <div class="row">
-                <H2 class="name"></H2>
-                <h3 class="text"></h3>
-                <a class="link">
-                <button> Launch Application?</button>
-                </a>
-                <a class="github">
-                <button> See github repo?</button>
-                </a>
-                </div>
-                </div> */
+  $(".title").text(`${buttonEvent.name}`);
+  $(".text").text(`${buttonEvent.text}`);
+  let link = $(".link")
+  link.attr("href", `${buttonEvent.link}`).attr('target','_blank');
+  let git = $(".github")
+  git.attr("href", `${buttonEvent.github}`).attr('target','_blank');
 }
