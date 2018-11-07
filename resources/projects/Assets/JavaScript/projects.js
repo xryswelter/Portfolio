@@ -3,7 +3,7 @@ let buttonArray = [
   {
     name: 'bamazon',
     title: 'bamazon',
-    text: 'bamazon is a project to demonstrate Node and MySQL skills',
+    text: 'bamazon is a terminal based assignment to simulate mySQL shopping and inventory management.  It was to demonstrate Node and MySQL skills',
     github: '-',
     link: 'https://github.com/xryswelter/bamazon',
     image: './resources/projects/Assets/Images/commercial-amazon.jpg',
@@ -13,7 +13,7 @@ let buttonArray = [
     name: 'Gems of Fate',
     title: 'gems',
     text:
-      'Gems of Fate is a game application to demonstrate my html, css, and JQuery skills',
+      'Gems of Fate is a game where you click on the different gems to reach a specific goal score.  Match and you win.  This application was developed to demonstrate my html, css, and JQuery skills',
     link: 'https://xryswelter.github.io/gems-of-fate/',
     github: 'https://github.com/xryswelter/gems-of-fate',
     image: './resources/projects/Assets/Images/Citrine-November.png',
