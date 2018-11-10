@@ -27,10 +27,13 @@ span {
   margin-top: 30px;
   border:0px;
 }
-.title,
-.text {
+.title {
   font-size: 24px;
-  font-weight: normal;
+  /* font-weight: normal; */
+}
+.text{
+  font-size:20px;
+  font-weight:normal;
 }
 button {
   border-radius: 5px;

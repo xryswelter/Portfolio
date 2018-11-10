@@ -1,165 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
     <!-- Personal CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Italianno|Libre+Barcode+128+Text" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/projects/Assets/CSS/projects.css">
-    <link rel="stylesheet" href="./resources/main.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Italianno|Libre+Barcode+128+Text"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./resources/projects/Assets/CSS/projects.css"
+    />
+    <link rel="stylesheet" href="./resources/main.css" />
     <title>Home</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <div class="name head">
-            Christopher Welter
+      <div class="name head">Christopher Welter</div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav spacing">
+            <li class="nav-item ">
+              <a class="nav-link" href="./index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./projects.html">Projects</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px">
+                    Resume
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Coding</a>
+                    <a class="dropdown-item" href="#">Quality</a>
+                    <a class="dropdown-item" href="#">Biology</a>
+                </div>
+            </li> -->            <li class="nav-item">
+              <a class="nav-link" href="./coding.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacts.html">Contact</a>
+            </li>
+          </ul>
         </div>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav spacing">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./projects.html">Projects</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px">
-                                        Resume
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Coding</a>
-                                        <a class="dropdown-item" href="#">Quality</a>
-                                        <a class="dropdown-item" href="#">Biology</a>
-                                    </div>
-                                </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./coding.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contacts.html">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      </nav>
     </div>
-
 
     <!-- Content -->
     <div class="content">
-        <div class="container">
-            <div class="card">
-                <div class="card-body">
-                    <p class="contentTitle">Projects</p>
-                    <div class="row projects">
-                    </div>
-                    <p class="contentTitle mt-3">Homeworks</p>
-                    <div class="row homeworks">
-                    </div>
-                </div>
-
-            </div>
-            <!-- Button trigger modal
-            <button type="button" class="btn btn-primary" >
-                Launch demo modal
-            </button> -->
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="explanation">
-                                <h2>Name: <H2 class="title"></H2>
-                                </h2>
-                                <h3>Summary: <h3 class="text"></h3>
-                                </h3>
-                                <br>
-                                <div class="row links">
-                                    <a class="link">
-                                        <button> Launch Application?</button>
-                                    </a>
-                                    <a class="github">
-                                        <button> See github repo?</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="card">
-                <div class="card-body">
-
-                </div>
-            </div> -->
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <p class="contentTitle">Projects</p>
+            <div class="row projects"></div>
+            <p class="contentTitle mt-3">Homeworks</p>
+            <div class="row homeworks"></div>
+          </div>
         </div>
+        <!--
+          Button trigger modal
+          <button type="button" class="btn btn-primary" >
 
+              Launch demo modal
+
+          </button>
+        -->
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="title"></h2>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="explanation">
+                  <h3 class="text"></h3>
+
+                  <br />
+                  <div class="row links">
+                    <a class="link">
+                      <button class="btn btn-primary">
+                        Launch Application?
+                      </button>
+                    </a>
+                    <a class="github">
+                      <button class="btn btn-primary">See github repo?</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+          <div class="card">
+              <div class="card-body">
+
+
+              </div>
+
+          </div>
+        -->
+      </div>
     </div>
     <!-- Footer -->
     <footer>
-        <div class="row">
-            <div class="col-md-5 footerGroups">
-                <h5 class="logo">Programs I know</h5>
-                <div class="row logos">
-                    <img group="html" class="program" src="MacroRef/Images/html.png">
-                    <img group="css" class="program" src="MacroRef/Images/css.png">
-                    <img group="javascript" class="program" src="MacroRef/Images/javascript.png">
-                    <img group="jquery" class="program" src="MacroRef/Images/jquery.png">
-                    <img group="node" class="program" src="MacroRef/Images/node-js.png">
-                    <img group="java" class="program" src="MacroRef/Images/java.png">
-                    <img group="bootstrap" class="program" src="MacroRef/Images/bootstrap.png">
-                </div>
-            </div>
-            <div class="col-md-4 ml-auto footerGroups">
-                <h5>Check Out My LinkedIn</h5>
-                <div class="row links">
-                    <a target="_blank" href="https://www.youtube.com/channel/UCp5e20ZmhrAcXJaMFG5xdJg/">
-                        <img class="youtube" src="MacroRef/Images/youtube.png">
-                    </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/christopherwelter/">
-                        <img id="linkedIn" src="MacroRef/Images/Linkedin.png">
-                    </a>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-5 footerGroups">
+          <h5 class="logo">Tech stacks I know</h5>
+          <div class="row logos">
+            <img
+              group="html"
+              class="program"
+              src="./MacroRef/Images/html.png"
+            />
+            <img group="css" class="program" src="./MacroRef/Images/css.png" />
+            <img
+              group="javascript"
+              class="program"
+              src="./MacroRef/Images/javascript.png"
+            />
+            <img
+              group="jquery"
+              class="program"
+              src="./MacroRef/Images/jquery.png"
+            />
+            <img
+              group="node"
+              class="program"
+              src="./MacroRef/Images/node-js.png"
+            />
+            <img
+              group="java"
+              class="program"
+              src="./MacroRef/Images/java.png"
+            />
+            <img
+              group="bootstrap"
+              class="program"
+              src="./MacroRef/Images/bootstrap.png"
+            />
+          </div>
         </div>
+        <div class="col-md-4 ml-auto footerGroups">
+          <h5>Check Out My LinkedIn and Youtube</h5>
+          <div class="row links">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCp5e20ZmhrAcXJaMFG5xdJg/"
+            >
+              <img class="youtube" src="./MacroRef/Images/youtube.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/christopherwelter/"
+            >
+              <img id="linkedIn" src="./MacroRef/Images/Linkedin.png" />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
+  </body>
 
-
-
-</body>
-
-
-
-<!-- Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-<script src="./resources/projects/Assets/JavaScript/projects.js"></script>
-
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./resources/projects/Assets/JavaScript/projects.js"></script>
 </html>
