@@ -7,7 +7,8 @@ let buttonArray = [
     github: '-',
     link: 'https://github.com/xryswelter/bamazon',
     image: './resources/projects/Assets/Images/commercial-amazon.jpg',
-    value: '0'
+    value: '0',
+    type: 'homeworks'
   },
   {
     name: 'Gems of Fate',
@@ -17,7 +18,8 @@ let buttonArray = [
     link: 'https://xryswelter.github.io/gems-of-fate/',
     github: 'https://github.com/xryswelter/gems-of-fate',
     image: './resources/projects/Assets/Images/Citrine-November.png',
-    value: '1'
+    value: '1',
+    type: 'homeworks'
   },
   {
     name: 'Train Game',
@@ -27,7 +29,8 @@ let buttonArray = [
     link: 'https://xryswelter.github.io/TrainGame/',
     github: 'https://github.com/xryswelter/TrainGame',
     image: './resources/projects/Assets/Images/train.png',
-    value: '2'
+    value: '2',
+    type: 'homeworks'
   },
   {
     name: 'Trivia Game',
@@ -37,7 +40,8 @@ let buttonArray = [
     link: 'https://xryswelter.github.io/Trivia-Game/',
     github: 'https://github.com/xryswelter/Trivia-Game',
     image: './resources/projects/Assets/Images/Trivia.png',
-    value: '3'
+    value: '3',
+    type: 'homeworks'
   },
   {
     name: 'Giphy',
@@ -47,7 +51,8 @@ let buttonArray = [
     link: 'https://xryswelter.github.io/GIPHY-project/',
     github: 'https://github.com/xryswelter/GIPHY-project',
     image: './resources/projects/Assets/Images/giffy.jpg',
-    value: '4'
+    value: '4',
+    type: 'homeworks'
   },
   {
     name: 'Music Venue Search',
@@ -57,7 +62,8 @@ let buttonArray = [
     link: 'https://christiehennes.github.io./Project1/',
     github: 'https://github.com/christiehennes/Project1',
     image: './resources/projects/Assets/Images/project1.jpg',
-    value: '5'
+    value: '5',
+    type: 'projects'
   },
   {
     name: 'Spielkatalog',
@@ -67,7 +73,8 @@ let buttonArray = [
     link: 'http://spielkatalog.herokuapp.com/',
     github: 'https://github.com/xryswelter/Spielkatalog',
     image: './resources/projects/Assets/Images/spielkatalog.PNG',
-    value: '6'
+    value: '6',
+    type: 'projects'
   },
   {
     name: 'CPR Online Testing',
@@ -77,7 +84,19 @@ let buttonArray = [
     link: 'https://secret-wave-42323.herokuapp.com',
     github: 'https://github.com/kkirker/CPR_finalproject',
     image: './resources/projects/Assets/Images/cpr.jpg',
-    value: '7'
+    value: '7',
+    type: 'projects'
+  },
+  {
+    name: 'toMyNerd',
+    title: 'toMyNerd',
+    text:
+      'This is an application that was designed to allow no coding people to send coded messages to their nerdy friends using binary and translate back messages from binary',
+    link: 'https://xryswelter.github.io/Binary-Translator/',
+    github: 'https://github.com/xryswelter/Binary-Translator',
+    image: './resources/projects/Assets/Images/binary.jpg',
+    value: '8',
+    type: 'independent'
   }
 ];
 //Function to load buttons onto screen
@@ -102,7 +121,7 @@ function loadbuttons() {
     // Create Title
     title.setAttribute('id', 'titles');
     title.classList.add('mt-3', 'btn', 'btn-primary');
-    title.setAttribute('style','margin: auto');
+    title.setAttribute('style', 'margin: auto');
     title.setAttribute('data-toggle', 'modal');
     title.setAttribute('value', `${element.value}`);
     title.setAttribute('data-target', '#exampleModal');
@@ -112,19 +131,31 @@ function loadbuttons() {
 
     card.append(button);
     card.append(title)
-    if (element.value < 5) {
-      $('.homeworks').append(card);
-    } else {
-      $('.projects').append(card);
+    switch (element.type) {
+      case 'independent':
+        $('.independent').append(card)
+        break;
+      case 'projects':
+        $('.projects').append(card);
+        break;
+      case 'homeworks':
+        $('.homeworks').append(card);
+        break;
+
+      default:
+        break;
     }
+    // if (element.value < 5) {
+    // } else {
+    // }
   });
 }
 // Document onload function
-$(document).ready(function() {
+$(document).ready(function () {
   loadbuttons();
 });
 // Click Event to display information below buttons
-$('.container').on('click', 'button', function() {
+$('.container').on('click', 'button', function () {
   let value = $(this).val();
   display(value);
 });

@@ -24,3 +24,6 @@ h6 + h6{
 .center >.row{
     justify-content: center
 }
+.projects{
+  font-weight:bold;
+}

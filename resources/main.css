@@ -47,6 +47,7 @@ footer {
 .links,
 .logos {
   justify-content: space-evenly;
+  padding:10px;
 }
 .footerGroups {
   text-align: center;
