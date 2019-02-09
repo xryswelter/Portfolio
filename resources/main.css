@@ -28,6 +28,7 @@ footer {
   background-color: rgb(141, 214, 255);
   padding-top:20px;
   padding-bottom:20px;
+  min-width: 90vw;
 }
 .program {
   background-size: contain;
